@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "PortInkFolio Reagent",
-  description: "Un portfolio créé avec Next.js",
+  description: "Un portfolio innovant sur le thème des systèmes d'exploitation.",
 };
 
 export default function RootLayout({
