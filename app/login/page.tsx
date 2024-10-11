@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTheme } from '../contexts/ThemeContext';
@@ -17,7 +18,7 @@ const LoginPage = () => {
     if (username === 'invite' && password === 'invite') {
       setInfo('Vous êtes connecté en mode normal.');
       router.push('/'); 
-    } else if (username === 'admin' && password === 'PortFolioInkToto59116') {
+    } else if (username === 'admin' && password === 'L@D2ksbHP8z+hY75!4_*') {
       setInfo('Vous êtes connecté en mode admin.');
       router.push('/admin'); 
     } else {
@@ -28,11 +29,23 @@ const LoginPage = () => {
   return (
     <div className={`flex min-h-screen ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-800'}`}>
       <div className="flex-1 flex items-center justify-center">
-        <h1 className="text-6xl font-bold">PortInkFolio : Reagent</h1>
+        <motion.h1 
+          className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600"
+          style={{ lineHeight: '1.2' }}
+          initial={{ opacity: 0, y: -50 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.5 }}>
+          PortInkFolio : Reagent
+        </motion.h1>
       </div>
-      <div className="border-l border-gray-300 flex items-center justify-center p-8 mx-auto">
-        <form onSubmit={handleLogin} className="w-80">
-          <h2 className="text-3xl font-bold mb-6 text-center">Connectez-vous</h2>
+      <div className="border-l border-gray-300 flex items-center justify-center p-8 mx-auto ml-4">
+        <motion.form 
+          onSubmit={handleLogin} 
+          className="w-80" 
+          initial={{ opacity: 0, scale: 0.8 }} 
+          animate={{ opacity: 1, scale: 1 }} 
+          transition={{ duration: 0.5 }}>
+          <h2 className="text-3xl font-bold mb-6 text-center">Connectez-vous à InkflOS</h2>
           <p className="text-blue-500 text-xs italic mb-4">Utilisez "invite" comme nom d'utilisateur et mot de passe pour accéder au portfolio.</p>
           {info && <p className="text-green-500 text-xs italic mb-4">{info}</p>}
           {error && <p className="text-red-500 text-xs italic mb-4">{error}</p>}
@@ -62,12 +75,16 @@ const LoginPage = () => {
             />
           </div>
           <div className="flex items-center justify-between">
-            <button
+            <motion.button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Se connecter
-            </button>
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              whileHover={{ scale: 1.05 }} // Animation au survol
+              whileTap={{ scale: 0.95 }} // Animation au clic
+            >
+              Se connecter
+            </motion.button>
           </div>
-        </form>
+        </motion.form>
       </div>
     </div>
   );
