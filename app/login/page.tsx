@@ -25,8 +25,6 @@ const LoginPage = () => {
     }
   };
 
-  // ... code existant ...
-
 return (
   <div className={`flex min-h-screen ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-800'}`}>
     <div className="flex-1 flex flex-col items-center justify-center"> {/* Changement ici pour centrer le contenu */}

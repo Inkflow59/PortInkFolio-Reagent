@@ -1,4 +1,5 @@
 "use client";
+
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import Image from 'next/image';
@@ -16,7 +17,7 @@ const HomePage = () => {
       <Navbar />
       <div className="flex flex-col items-center mt-10">
         <Image
-          src="/profil/photo.jpg" // Remplacez par le chemin de votre photo
+          src="/profil/photo.jpg"
           alt="Tom CUCHEROSSET"
           width={150}
           height={150}
