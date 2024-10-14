@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import { useTheme } from '../contexts/ThemeContext';
+import { motion } from 'framer-motion';
 
 const Desktop = () => {
   const { theme } = useTheme();
