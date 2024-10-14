@@ -20,7 +20,7 @@ const Desktop = () => {
   };
 
   return (
-    <div className={`min-h-screen flex flex-col items-center justify-between ${theme === 'dark' ? 'bg-gradient-to-r from-gray-800 to-black text-white' : 'bg-gradient-to-r from-blue-200 to-white text-black'}`}>
+    <div className={`min-h-screen flex flex-col items-center justify-between ${theme === 'dark' ? 'bg-gradient-to-r from-black to-gray-800 text-white' : 'bg-gradient-to-r from-blue-200 to-white text-black'}`}>
       <div className="flex flex-wrap justify-center mt-10">
         {icons.map((icon, index) => (
           <div className="flex flex-col items-center m-4 group cursor-pointer" key={index} onClick={() => handleIconClick(icon.path)}> {/* Ajout du gestionnaire de clic */}

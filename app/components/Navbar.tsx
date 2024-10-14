@@ -31,11 +31,11 @@ const Navbar = () => {
   ];
 
   const handleLogoClick = () => {
-    router.push('/'); // Redirige vers la page d'accueil
+    router.push('/');
   };
 
   const handleIconClick = (path: string) => {
-    router.push(path); // Redirige vers le chemin spécifié
+    router.push(path);
   };
 
   return (
@@ -44,27 +44,27 @@ const Navbar = () => {
         <motion.div 
           whileHover={{ scale: 1.1 }} 
           onClick={handleLogoClick} 
-          style={{ cursor: 'pointer' }} // Change le curseur au-dessus du logo
+          style={{ cursor: 'pointer' }}
         >
           <Image
             src="/images/logo.svg"
             alt="Logo"
-            width={40} // Réduit la taille du logo
-            height={40} // Réduit la taille du logo
+            width={40}
+            height={40}
             className={`filter ${theme === 'dark' ? 'invert' : ''}`}
           />
         </motion.div>
-        <button onClick={toggleTheme} className="ml-4 p-1 border rounded"> {/* Réduit la taille du bouton */}
+        <button onClick={toggleTheme} className="ml-4 p-1 border rounded">
           Changer le thème
         </button>
       </div>
-      <div className="flex space-x-4 fixed left-1/2 transform -translate-x-1/2"> {/* Position fixe des icônes */}
+      <div className="flex space-x-4 fixed left-1/2 transform -translate-x-1/2">
       {icons.map((icon, index) => (
         <motion.div
           key={index}
           className={`relative ${pathname === icon.path ? 'border-2 border-blue-500' : ''}`}
-          style={{ cursor: 'pointer' }} // Change le curseur au-dessus de l'icône
-          onClick={() => handleIconClick(icon.path)} // Ajout de l'appel à handleIconClick
+          style={{ cursor: 'pointer' }}
+          onClick={() => handleIconClick(icon.path)}
         >
           <motion.img
             src={icon.src}
