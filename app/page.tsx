@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 const Page = () => {
   const [loading, setLoading] = useState(true);
   const [loadingText, setLoadingText] = useState("Chargement des assets...");
+  const [progressColor, setProgressColor] = useState("bg-red-500");
   const router = useRouter();
 
   useEffect(() => {
@@ -20,6 +21,7 @@ const Page = () => {
     const intervalId = setInterval(() => {
       currentIndex = (currentIndex + 1) % loadingTexts.length;
       setLoadingText(loadingTexts[currentIndex]);
+      setProgressColor(currentIndex === 0 ? "bg-red-500" : currentIndex === 1 ? "bg-blue-500" : "bg-green-500");
     }, 3333);
 
     const timeoutId = setTimeout(() => {
@@ -53,7 +55,7 @@ const Page = () => {
         <div className="text-center">
           <h1 className={`text-gray-800 dark:text-white text-3xl mb-6 ${loadingText ? 'animate-textFadeIn' : ''}`}>{loadingText}</h1>
           <div className="relative w-96 h-4 bg-gray-300 dark:bg-gray-700 rounded mx-auto">
-            <div className="absolute top-0 left-0 h-4 bg-green-500 rounded animate-load"></div>
+            <div className={`absolute top-0 left-0 h-4 ${progressColor} rounded animate-load`}></div> {/* Utilisation de la couleur dynamique */}
           </div>
         </div>
       ) : (
