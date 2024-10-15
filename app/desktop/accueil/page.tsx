@@ -8,6 +8,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 // Import des icônes
 import { SiTypescript, SiReact, SiJavascript, SiPython, SiPhp, SiNextdotjs, SiMysql, SiSymfony, SiLaravel, SiCsharp } from 'react-icons/si';
 import { BiLogoJava } from 'react-icons/bi';
+import { FaHtml5 } from "react-icons/fa";
 
 const HomePage = () => {
   const { theme } = useTheme();
@@ -66,6 +67,10 @@ const HomePage = () => {
           <div className="flex flex-col items-center mx-4">
             <SiJavascript className='size-8' />
             <span>JavaScript</span>
+          </div>
+          <div className="flex flex-col items-center mx-4">
+            <FaHtml5 className='size-8' />
+            <span>HTML5</span>
           </div>
           <div className="flex flex-col items-center mx-4">
             <SiTypescript className='size-8' />
