@@ -40,7 +40,7 @@ const ContactPage = () => {
     <div className={`min-h-screen flex flex-col items-center justify-between ${theme === 'dark' ? 'bg-gradient-to-r from-black to-gray-800 text-white' : 'bg-gradient-to-r from-blue-200 to-white text-black'}`}>
       <Navbar />
       <div className="flex flex-col items-center justify-center mt-10">
-        <h1 className="text-4xl font-bold mb-6">Contactez-nous</h1>
+        <h1 className="text-4xl font-bold mb-6">Un problème ? Contactez-moi</h1>
         <form onSubmit={handleSubmit} className="w-80">
           <div className="mb-4">
             <label className="block text-sm font-bold mb-2" htmlFor="email">Email</label>
