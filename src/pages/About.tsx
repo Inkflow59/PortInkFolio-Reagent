@@ -23,7 +23,7 @@ const About = () => {
 
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
             <Gamepad className="w-12 h-12 text-[#245EDC] mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-2">Game Dev</h3>
+            <h3 className="text-xl font-bold mb-2">Développement vidéludique</h3>
             <p className="text-gray-600">Création d'expériences vidéoludiques immersives</p>
           </div>
 
