@@ -11,7 +11,7 @@ export const fr = {
     },
     "home": {
       "welcome": "Bienvenue sur mon portfolio",
-      "intro": "Je suis Tom CUCHEROSSET, développeur Backend & Jeux Vidéo"
+      "intro": "Je suis Tom CUCHEROSSET, développeur spécialisé dans le Backend, le développement de jeux vidéo et la création de projets web. Je suis passionné par les technologies open source et j'aime partager mes connaissances avec les autres.",
     },
     "projects": {
       "games": "Jeux Vidéo",
