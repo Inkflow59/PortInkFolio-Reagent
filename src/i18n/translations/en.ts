@@ -11,7 +11,7 @@ export const en = {
     },
     "home": {
       "welcome": "Welcome to my portfolio",
-      "intro": "I'm Tom CUCHEROSSET, a developer specialized in Backend, Game Development, and Web Projects. I'm passionate about open source technologies and I love sharing my knowledge with others."
+      "intro": "I'm Tom CUCHEROSSET, a developer specialized in Backend, Game development, and Web Projects. I'm passionate about open source technologies and I love sharing my knowledge with others."
     },
     "projects": {
       "games": "Video Games",

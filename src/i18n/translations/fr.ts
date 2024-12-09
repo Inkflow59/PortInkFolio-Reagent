@@ -25,7 +25,7 @@ export const fr = {
     },
     "about": {
       "title": "À Propos",
-      "intro": "Développeur passionné par le Backend et les Jeux Vidéo",
+      "intro": "Développeur passionné par le Backend et les jeux vidéo",
       "description": "Spécialisé dans le développement backend et la création de jeux vidéo"
     },
     "contact": {
