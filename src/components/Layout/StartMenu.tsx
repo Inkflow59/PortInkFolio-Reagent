@@ -28,7 +28,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ isOpen, onClose }) => {
           <div className="bg-[#0054E3] p-4">
             <div className="flex items-center gap-3">
               <Monitor className="w-8 h-8 text-white" />
-              <span className="text-white font-bold">TomOS</span>
+              <span className="text-white font-bold">Tom CUCHEROSSET</span>
             </div>
           </div>
           
