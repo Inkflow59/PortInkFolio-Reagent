@@ -9,6 +9,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import Skills from './pages/Skills';
+import HAProxyPage from './pages/temp/HAProxy/HAProxyPage';
 import './i18n/i18n';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path="/temp/haproxy" element={<HAProxyPage />} />
           </Routes>
         </div>
         <WindowsTaskbar />

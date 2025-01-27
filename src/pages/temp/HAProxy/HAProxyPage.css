@@ -1,0 +1,31 @@
+.haproxy-content {
+  code {
+    background: rgba(135, 131, 120, 0.15);
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    font-size: 85%;
+    color: #eb5757;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: none;
+    border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 1.7em;
+    margin: 0.6em 0;
+  }
+
+  li {
+    padding-left: 0.1em;
+  }
+} 

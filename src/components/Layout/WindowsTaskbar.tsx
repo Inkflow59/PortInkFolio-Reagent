@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
-import { Home, FolderGit2, Radio, User, Mail, FileText, Brain, Monitor } from 'lucide-react';
+import { Home, FolderGit2, Radio, User, Mail, FileText, Brain, Monitor, Server } from 'lucide-react';
 import StartMenu from './StartMenu';
 import Clock from './Clock';
 
@@ -17,6 +17,7 @@ const WindowsTaskbar = () => {
     { to: '/contact', icon: Mail, label: t('nav.contact') },
     { to: '/resume', icon: FileText, label: t('nav.resume') },
     { to: '/skills', icon: Brain, label: t('nav.skills') },
+    { to: '/temp/haproxy', icon: Server, label: 'HAProxy' },
   ];
 
   return (
