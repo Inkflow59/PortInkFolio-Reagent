@@ -30,15 +30,15 @@ const HomePage = () => {
       <div className="mt-10 p-6 bg-opacity-80 backdrop-blur-md rounded-lg">
         <h3 className="text-3xl font-semibold">Expériences</h3>
         <ul className="list-disc list-inside mt-2">
-          <li>
+          <li className="mb-4">
             Expérience 1
             <p className="text-sm">Description de l'expérience 1.</p>
           </li>
-          <li>
+          <li className="mb-4">
             Expérience 2
             <p className="text-sm">Description de l'expérience 2.</p>
           </li>
-          <li>
+          <li className="mb-4">
             Expérience 3
             <p className="text-sm">Description de l'expérience 3.</p>
           </li>
@@ -56,6 +56,23 @@ const HomePage = () => {
             <p className="text-sm">Description de la formation 2.</p>
           </li>
           <li>
+            Formation 3
+            <p className="text-sm">Description de la formation 3.</p>
+          </li>
+        </ul>
+      </div>
+      <div className="mt-10 p-6 bg-opacity-80 backdrop-blur-md rounded-lg">
+        <h3 className="text-3xl font-semibold">Formations effectuées</h3>
+        <ul className="list-disc list-inside mt-2">
+          <li className="mb-4">
+            Formation 1
+            <p className="text-sm">Description de la formation 1.</p>
+          </li>
+          <li className="mb-4">
+            Formation 2
+            <p className="text-sm">Description de la formation 2.</p>
+          </li>
+          <li className="mb-4">
             Formation 3
             <p className="text-sm">Description de la formation 3.</p>
           </li>
