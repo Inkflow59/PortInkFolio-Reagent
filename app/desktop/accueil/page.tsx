@@ -4,6 +4,7 @@ import React from 'react';
 import Navbar from '../../components/Navbar';
 import Image from 'next/image';
 import { useTheme } from '../../contexts/ThemeContext';
+import ProfileCard from '../../components/ProfileCard';
 
 // Import des icônes
 import { SiTypescript, SiReact, SiJavascript, SiPython, SiPhp, SiNextdotjs, SiMysql, SiSymfony, SiLaravel, SiCsharp } from 'react-icons/si';
@@ -26,60 +27,64 @@ const HomePage = () => {
         />
         <h1 className="text-4xl font-bold mt-4">Tom CUCHEROSSET</h1>
         <h2 className="text-2xl mt-2">Développeur web et logiciel spécialisé dans le backend</h2>
+        <p className="text-lg mt-2">Passionné par le développement d'applications robustes et performantes, je suis toujours à la recherche de nouveaux défis.</p>
+      </div>
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h3 className="text-3xl font-semibold">Expériences</h3>
+          <ul className="list-none mt-2">
+            <li className="mb-4">
+              <ProfileCard 
+                imageSrc="/profil/experience1.jpg" 
+                title="Expérience 1" 
+                description="Description de l'expérience 1." 
+              />
+            </li>
+            <li className="mb-4">
+              <ProfileCard 
+                imageSrc="/profil/experience2.jpg" 
+                title="Expérience 2" 
+                description="Description de l'expérience 2." 
+              />
+            </li>
+            <li className="mb-4">
+              <ProfileCard 
+                imageSrc="/profil/experience3.jpg" 
+                title="Expérience 3" 
+                description="Description de l'expérience 3." 
+              />
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-3xl font-semibold">Formations</h3>
+          <ul className="list-none mt-2">
+            <li className="mb-4">
+              <ProfileCard 
+                imageSrc="/images/formation1.jpg" 
+                title="Formation 1" 
+                description="Description de la formation 1." 
+              />
+            </li>
+            <li className="mb-4">
+              <ProfileCard 
+                imageSrc="/images/formation2.jpg" 
+                title="Formation 2" 
+                description="Description de la formation 2." 
+              />
+            </li>
+            <li className="mb-4">
+              <ProfileCard 
+                imageSrc="/images/formation3.jpg" 
+                title="Formation 3" 
+                description="Description de la formation 3." 
+              />
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="mt-10 p-6 bg-opacity-80 backdrop-blur-md rounded-lg">
-        <h3 className="text-3xl font-semibold">Expériences</h3>
-        <ul className="list-disc list-inside mt-2">
-          <li className="mb-4">
-            Expérience 1
-            <p className="text-sm">Description de l'expérience 1.</p>
-          </li>
-          <li className="mb-4">
-            Expérience 2
-            <p className="text-sm">Description de l'expérience 2.</p>
-          </li>
-          <li className="mb-4">
-            Expérience 3
-            <p className="text-sm">Description de l'expérience 3.</p>
-          </li>
-        </ul>
-      </div>
-      <div className="mt-10 p-6 bg-opacity-80 backdrop-blur-md rounded-lg">
-        <h3 className="text-3xl font-semibold">Formations</h3>
-        <ul className="list-disc list-inside mt-2">
-          <li>
-            Formation 1
-            <p className="text-sm">Description de la formation 1.</p>
-          </li>
-          <li>
-            Formation 2
-            <p className="text-sm">Description de la formation 2.</p>
-          </li>
-          <li>
-            Formation 3
-            <p className="text-sm">Description de la formation 3.</p>
-          </li>
-        </ul>
-      </div>
-      <div className="mt-10 p-6 bg-opacity-80 backdrop-blur-md rounded-lg">
-        <h3 className="text-3xl font-semibold">Formations effectuées</h3>
-        <ul className="list-disc list-inside mt-2">
-          <li className="mb-4">
-            Formation 1
-            <p className="text-sm">Description de la formation 1.</p>
-          </li>
-          <li className="mb-4">
-            Formation 2
-            <p className="text-sm">Description de la formation 2.</p>
-          </li>
-          <li className="mb-4">
-            Formation 3
-            <p className="text-sm">Description de la formation 3.</p>
-          </li>
-        </ul>
-      </div>
-      <div className="mt-10 p-6 bg-opacity-80 backdrop-blur-md rounded-lg">
-        <h3 className="text-3xl font-semibold text-center mb-4">Langages maîtrisés</h3>
+        <h3 className="text-3xl font-semibold text-center mb-4">Langages de programmation maîtrisés</h3>
         <div className="flex flex-wrap justify-center mt-2">
           <div className="flex flex-col items-center mx-4">
             <SiJavascript className='size-8' />
