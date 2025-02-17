@@ -15,24 +15,25 @@ const HomePage = () => {
   const { theme } = useTheme();
 
   return (
-    <div className={`min-h-screen flex flex-col items-center justify-between ${theme === 'dark' ? 'bg-gradient-to-r from-black to-gray-800 text-white' : 'bg-gradient-to-r from-blue-200 to-white text-black'} overflow-auto pb-20`}>
+    <div className={`min-h-screen flex flex-col items-center justify-between ${theme === 'dark' ? 'bg-gradient-to-r from-black to-gray-800 text-white' : 'bg-gradient-to-r from-blue-200 to-white text-black'} overflow-auto pb-20 px-4 md:px-8`}>
       <Navbar />
-      <div className="flex flex-col items-center mt-10">
+      <div className="flex flex-col items-center mt-6 md:mt-10 text-center">
         <Image
           src="/profil/photo.jpg"
           alt="Tom CUCHEROSSET"
-          width={150}
-          height={150}
-          className={`rounded-full border-4 ${theme === 'dark' ? 'border-white' : 'border-black'} transition duration-300`}
+          width={120}
+          height={120}
+          className={`rounded-full border-4 ${theme === 'dark' ? 'border-white' : 'border-black'} transition duration-300 md:w-[150px] md:h-[150px]`}
         />
-        <h1 className="text-4xl font-bold mt-4">Tom CUCHEROSSET</h1>
-        <h2 className="text-2xl mt-2">Développeur web et logiciel spécialisé dans le backend</h2>
-        <p className="text-lg mt-2">Passionné par le développement d'applications robustes et performantes, je suis toujours à la recherche de nouveaux défis.</p>
+        <h1 className="text-2xl md:text-4xl font-bold mt-4">Tom CUCHEROSSET</h1>
+        <h2 className="text-xl md:text-2xl mt-2 px-4">Développeur web et logiciel spécialisé dans le backend</h2>
+        <p className="text-base md:text-lg mt-2 max-w-2xl">Passionné par le développement d'applications robustes et performantes, je suis toujours à la recherche de nouveaux défis.</p>
       </div>
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div className="mt-8 md:mt-10 w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
         <div>
-          <h3 className="text-3xl font-semibold">Expériences</h3>
-          <ul className="list-none mt-2">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4">Expériences</h3>
+          <ul className="list-none space-y-4">
             <li className="mb-4">
               <ProfileCard 
                 imageSrc="/profil/experience1.jpg" 
@@ -57,8 +58,8 @@ const HomePage = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-3xl font-semibold">Formations</h3>
-          <ul className="list-none mt-2">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4 mt-6 lg:mt-0">Formations</h3>
+          <ul className="list-none space-y-4">
             <li className="mb-4">
               <ProfileCard 
                 imageSrc="/images/formation1.jpg" 
@@ -83,57 +84,29 @@ const HomePage = () => {
           </ul>
         </div>
       </div>
-      <div className="mt-10 p-6 bg-opacity-80 backdrop-blur-md rounded-lg">
-        <h3 className="text-3xl font-semibold text-center mb-4">Langages de programmation maîtrisés</h3>
-        <div className="flex flex-wrap justify-center mt-2">
-          <div className="flex flex-col items-center mx-4">
-            <SiJavascript className='size-8' />
-            <span>JavaScript</span>
-          </div>
-          <div className="flex flex-col items-center mx-4">
-            <FaHtml5 className='size-8' />
-            <span>HTML5</span>
-          </div>
-          <div className="flex flex-col items-center mx-4">
-            <SiTypescript className='size-8' />
-            <span>TypeScript</span>
-          </div>
-          <div className="flex flex-col items-center mx-4">
-            <SiReact className='size-8' />
-            <span>React</span>
-          </div>
-          <div className="flex flex-col items-center mx-4">
-            <SiPython className='size-8' />
-            <span>Python</span>
-          </div>
-          <div className="flex flex-col items-center mx-4">
-            <SiPhp className='size-8' />
-            <span>PHP</span>
-          </div>
-          <div className="flex flex-col items-center mx-4">
-            <BiLogoJava className='size-8' />
-            <span>Java</span>
-          </div>
-          <div className="flex flex-col items-center mx-4">
-            <SiNextdotjs className='size-8' />
-            <span>Next.js</span>
-          </div>
-          <div className="flex flex-col items-center mx-4">
-            <SiMysql className='size-8' />
-            <span>MySQL</span>
-          </div>
-          <div className="flex flex-col items-center mx-4">
-            <SiSymfony className='size-8' />
-            <span>Symfony</span>
-          </div>
-          <div className="flex flex-col items-center mx-4">
-            <SiLaravel className='size-8' />
-            <span>Laravel</span>
-          </div>
-          <div className="flex flex-col items-center mx-4">
-            <SiCsharp className='size-8' />
-            <span>C#</span>
-          </div>
+
+      <div className="mt-8 md:mt-10 p-4 md:p-6 bg-opacity-80 backdrop-blur-md rounded-lg w-full max-w-6xl">
+        <h3 className="text-2xl md:text-3xl font-semibold text-center mb-4">Langages de programmation maîtrisés</h3>
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 justify-items-center">
+          {[
+            { icon: SiJavascript, name: 'JavaScript' },
+            { icon: FaHtml5, name: 'HTML5' },
+            { icon: SiTypescript, name: 'TypeScript' },
+            { icon: SiReact, name: 'React' },
+            { icon: SiPython, name: 'Python' },
+            { icon: SiPhp, name: 'PHP' },
+            { icon: BiLogoJava, name: 'Java' },
+            { icon: SiNextdotjs, name: 'Next.js' },
+            { icon: SiMysql, name: 'MySQL' },
+            { icon: SiSymfony, name: 'Symfony' },
+            { icon: SiLaravel, name: 'Laravel' },
+            { icon: SiCsharp, name: 'C#' }
+          ].map((tech, index) => (
+            <div key={index} className="flex flex-col items-center p-2 hover:scale-110 transition-transform">
+              <tech.icon className="size-6 md:size-8" />
+              <span className="text-sm md:text-base mt-1">{tech.name}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

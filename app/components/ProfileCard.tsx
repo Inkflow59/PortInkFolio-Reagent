@@ -8,14 +8,18 @@ interface ProfileCardProps {
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ imageSrc, title, description }) => {
   return (
-    <div className="p-6 bg-opacity-80 backdrop-blur-md rounded-lg shadow-lg flex flex-col justify-between">
-      <div>
-        <strong className="text-lg">{title}</strong>
-        <p className="text-sm">{description}</p>
+    <div className="p-4 md:p-6 bg-opacity-80 backdrop-blur-md rounded-lg shadow-lg flex flex-col md:flex-row md:items-center gap-4 hover:shadow-xl transition-shadow duration-300">
+      <div className="flex-1 min-w-0">
+        <strong className="text-base md:text-lg font-semibold block mb-2">{title}</strong>
+        <p className="text-sm md:text-base line-clamp-3 md:line-clamp-none">{description}</p>
       </div>
-      <img src={imageSrc} alt={title} className="mt-4 w-full h-auto rounded" />
+      <img 
+        src={imageSrc} 
+        alt={title} 
+        className="w-full md:w-1/3 h-auto rounded object-cover" 
+      />
     </div>
   );
 };
 
-export default ProfileCard; 
+export default ProfileCard;

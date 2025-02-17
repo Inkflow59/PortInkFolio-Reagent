@@ -22,22 +22,28 @@ const Desktop = () => {
 
   return (
     <div className={`min-h-screen flex flex-col items-center justify-between ${theme === 'dark' ? 'bg-gradient-to-r from-black to-gray-800 text-white' : 'bg-gradient-to-r from-blue-200 to-white text-black'}`}>
-      <div className="flex flex-wrap justify-center mt-10">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-8 p-4 md:p-8 mt-4 md:mt-10">
         {icons.map((icon, index) => (
-          <div className="flex flex-col items-center m-4 group cursor-pointer" key={index} onClick={() => handleIconClick(icon.path)}> {/* Ajout du gestionnaire de clic */}
+          <motion.div 
+            className="flex flex-col items-center group cursor-pointer" 
+            key={index} 
+            onClick={() => handleIconClick(icon.path)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <a href={icon.external ? icon.path : undefined} target={icon.external ? '_blank' : undefined} rel="noopener noreferrer">
               <Image
                 src={icon.src}
                 alt={`Icon ${index + 1}`}
-                width={100}
-                height={100}
-                className={`w-16 h-16 ${theme === 'dark' ? 'filter invert' : ''} transition-transform duration-300 transform group-hover:scale-110`}
+                width={64}
+                height={64}
+                className={`w-12 h-12 md:w-16 md:h-16 ${theme === 'dark' ? 'filter invert' : ''}`}
               />
             </a>
-            <span className={`mt-2 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
+            <span className={`mt-2 text-sm md:text-base text-center ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
               {icon.name}
             </span>
-          </div>
+          </motion.div>
         ))}
       </div>
       <Navbar />

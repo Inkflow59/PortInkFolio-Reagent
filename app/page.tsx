@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { ThemeToggle } from './components/ThemeToggle';
+import ThemeToggle from './components/ThemeToggle';
 import { useRouter } from 'next/navigation';
 
 const Page = () => {
