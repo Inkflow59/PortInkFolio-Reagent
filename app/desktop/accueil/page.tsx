@@ -63,22 +63,22 @@ const HomePage = () => {
             <li className="mb-4">
               <ProfileCard 
                 imageSrc="/images/formation1.jpg" 
-                title="Formation 1" 
-                description="Description de la formation 1." 
+                title="Licence SESI" 
+                description="Licence de Sciences Exactes et Sciences de l'Ingénieur, arrêtée en 2ème année pour me consacrer pleinement au développement web et logiciel." 
               />
             </li>
             <li className="mb-4">
               <ProfileCard 
                 imageSrc="/images/formation2.jpg" 
-                title="Formation 2" 
-                description="Description de la formation 2." 
+                title="BTS SIO SLAM" 
+                description="BTS Services Informatiques aux Organisations, spécialité Solutions Logicielles et Applications Métiers, obtenu en 2025 au Lycée Gaston Berger de Lille." 
               />
             </li>
             <li className="mb-4">
               <ProfileCard 
                 imageSrc="/images/formation3.jpg" 
-                title="Formation 3" 
-                description="Description de la formation 3." 
+                title="Mastère Développeur Fullstack" 
+                description="Formation en développement web et logiciel, axée sur les technologies modernes et les méthodes agiles, approfondissant tous les aspects du développement. Actuellement en cours." 
               />
             </li>
           </ul>
